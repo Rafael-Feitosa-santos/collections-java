@@ -1,7 +1,5 @@
 package set.ordenacao;
 
-import list.pesquisa.CatalogoLivros;
-
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
