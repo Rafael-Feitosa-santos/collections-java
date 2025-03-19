@@ -41,17 +41,17 @@ public class AgendaEvento {
         Map<LocalDate, Evento> eventosTreeMap = new TreeMap<>(eventoMap);
 
         for (Map.Entry<LocalDate, Evento> entry : eventosTreeMap.entrySet()) {
-            if (!entry.getKey().isBefore(dataAtual)) { // Verifica se a data é hoje ou futura
+            if (!entry.getKey().isBefore(dataAtual)) { 
                 proximaData = entry.getKey();
                 proximoEvento = entry.getValue();
                 System.out.printf("Próximo evento - Data: %s - Evento: %s%n",
                         proximaData.format(formatter),
-                        proximoEvento.getNome()); // Supondo que Evento tenha getNome()
+                        proximoEvento.getNome()); 
                 break;
             }
         }
 
-        // Caso não haja eventos futuros
+  
         if (proximoEvento == null) {
             System.out.println("Nenhum evento futuro encontrado.");
         }
